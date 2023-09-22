@@ -1,4 +1,6 @@
 #초기 설정
+# https://github.com/VeryCuteSeoJun/tetris_finsh
+
 import pygame
 import random
 
@@ -331,7 +333,6 @@ while runcode:
                     for down in range(y-1,3,-1):
                         for xx in range(0,10): nonrealboard[xx][down+1]=nonrealboard[xx][down]
                     for xx in range(0,10): nonrealboard[xx][4]=0
-                    temp_cleared_lines+=1
             #구멍 수 세기
             hole_num=0
             highest = []
