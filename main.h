@@ -1,30 +1,30 @@
 #define main_h
 
-#define LEFT 75 //ÁÂ·Î ÀÌµ¿    //Å°º¸µå°ªµé
-#define RIGHT 77 //¿ì·Î ÀÌµ¿ 
-#define UP 72 //È¸Àü 
+#define LEFT 75 //ì¢Œë¡œ ì´ë™    //í‚¤ë³´ë“œê°’ë“¤
+#define RIGHT 77 //ìš°ë¡œ ì´ë™ 
+#define UP 72 //íšŒì „ 
 #define DOWN 80 //soft drop
 #define SPACE 32 //hard drop
-#define p 112 //ÀÏ½ÃÁ¤Áö 
-#define P 80 //ÀÏ½ÃÁ¤Áö
-#define ESC 27 //°ÔÀÓÁ¾·á 
+#define p 112 //ì¼ì‹œì •ì§€ 
+#define P 80 //ì¼ì‹œì •ì§€
+#define ESC 27 //ê²Œìž„ì¢…ë£Œ 
 
 #define false 0
 #define true 1
 
-#define ACTIVE_BLOCK -2 // °ÔÀÓÆÇ¹è¿­¿¡ ÀúÀåµÉ ºí·ÏÀÇ »óÅÂµé 
-#define CEILLING -1     // ºí·ÏÀÌ ÀÌµ¿ÇÒ ¼ö ÀÖ´Â °ø°£Àº 0 ¶Ç´Â À½ÀÇ Á¤¼ö·á Ç¥Çö 
-#define EMPTY 0         // ºí·ÏÀÌ ÀÌµ¿ÇÒ ¼ö ¾ø´Â °ø°£Àº ¾ç¼ö·Î Ç¥Çö 
+#define ACTIVE_BLOCK -2 // ê²Œìž„íŒë°°ì—´ì— ì €ìž¥ë  ë¸”ë¡ì˜ ìƒíƒœë“¤ 
+#define CEILLING -1     // ë¸”ë¡ì´ ì´ë™í•  ìˆ˜ ìžˆëŠ” ê³µê°„ì€ 0 ë˜ëŠ” ìŒì˜ ì •ìˆ˜ë£Œ í‘œí˜„ 
+#define EMPTY 0         // ë¸”ë¡ì´ ì´ë™í•  ìˆ˜ ì—†ëŠ” ê³µê°„ì€ ì–‘ìˆ˜ë¡œ í‘œí˜„ 
 #define WALL 1
-#define INACTIVE_BLOCK 2 // ÀÌµ¿ÀÌ ¿Ï·áµÈ ºí·Ï°ª 
+#define INACTIVE_BLOCK 2 // ì´ë™ì´ ì™„ë£Œëœ ë¸”ë¡ê°’ 
 #define TRACE_BLOCK -3
 
-#define MAIN_X 12 //°ÔÀÓÆÇ °¡·ÎÅ©±â 
-#define MAIN_Y 24 //°ÔÀÓÆÇ ¼¼·ÎÅ©±â 
-#define MAIN_X_ADJ 3 //°ÔÀÓÆÇ À§Ä¡Á¶Á¤ 
-#define MAIN_Y_ADJ 1 //°ÔÀÓÆÇ À§Ä¡Á¶Á¤ 
+#define MAIN_X 12 //ê²Œìž„íŒ ê°€ë¡œí¬ê¸° 
+#define MAIN_Y 24 //ê²Œìž„íŒ ì„¸ë¡œí¬ê¸° 
+#define MAIN_X_ADJ 3 //ê²Œìž„íŒ ìœ„ì¹˜ì¡°ì • 
+#define MAIN_Y_ADJ 1 //ê²Œìž„íŒ ìœ„ì¹˜ì¡°ì • 
 
-#define STATUS_X_ADJ MAIN_X_ADJ+MAIN_X+1 //°ÔÀÓÁ¤º¸Ç¥½Ã À§Ä¡Á¶Á¤ 
+#define STATUS_X_ADJ MAIN_X_ADJ+MAIN_X+1 //ê²Œìž„ì •ë³´í‘œì‹œ ìœ„ì¹˜ì¡°ì • 
 
 #define _HEIGHT 0
 #define _HOLE 1
@@ -50,52 +50,52 @@ int blocks[7][4][4][4] = {
  {0,0,0,0,0,0,0,0,1,1,1,0,0,0,1,0},{0,0,0,0,0,1,1,0,0,1,0,0,0,1,0,0}},
 {{0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0},{0,0,0,0,0,1,0,0,0,1,1,0,0,1,0,0},
  {0,0,0,0,0,0,0,0,1,1,1,0,0,1,0,0},{0,0,0,0,0,1,0,0,1,1,0,0,0,1,0,0}}
-}; //ºí·Ï¸ð¾ç ÀúÀå 4*4°ø°£¿¡ ºí·ÏÀ» Ç¥Çö blcoks[b_type][b_rotation][i][j]·Î »ç¿ë 
+}; //ë¸”ë¡ëª¨ì–‘ ì €ìž¥ 4*4ê³µê°„ì— ë¸”ë¡ì„ í‘œí˜„ blcoks[b_type][b_rotation][i][j]ë¡œ ì‚¬ìš© 
 
 
 
-int STATUS_Y_GOAL; //GOAL Á¤º¸Ç¥½ÃÀ§Ä¡Y ÁÂÇ¥ ÀúÀå 
-int STATUS_Y_LEVEL; //LEVEL Á¤º¸Ç¥½ÃÀ§Ä¡Y ÁÂÇ¥ ÀúÀå
-int STATUS_Y_SCORE; //SCORE Á¤º¸Ç¥½ÃÀ§Ä¡Y ÁÂÇ¥ ÀúÀå
+int STATUS_Y_GOAL; //GOAL ì •ë³´í‘œì‹œìœ„ì¹˜Y ì¢Œí‘œ ì €ìž¥ 
+int STATUS_Y_LEVEL; //LEVEL ì •ë³´í‘œì‹œìœ„ì¹˜Y ì¢Œí‘œ ì €ìž¥
+int STATUS_Y_SCORE; //SCORE ì •ë³´í‘œì‹œìœ„ì¹˜Y ì¢Œí‘œ ì €ìž¥
 
 
 
-int b_type; //ºí·Ï Á¾·ù¸¦ ÀúÀå 
-int b_rotation; //ºí·Ï È¸Àü°ª ÀúÀå 
-int b_type_next; //´ÙÀ½ ºí·Ï°ª ÀúÀå 
+int b_type; //ë¸”ë¡ ì¢…ë¥˜ë¥¼ ì €ìž¥ 
+int b_rotation; //ë¸”ë¡ íšŒì „ê°’ ì €ìž¥ 
+int b_type_next; //ë‹¤ìŒ ë¸”ë¡ê°’ ì €ìž¥ 
 
-int main_org[MAIN_Y][MAIN_X]; //°ÔÀÓÆÇÀÇ Á¤º¸¸¦ ÀúÀåÇÏ´Â ¹è¿­ ¸ð´ÏÅÍ¿¡ Ç¥½ÃÈÄ¿¡ main_cpy·Î º¹»çµÊ 
-int main_cpy[MAIN_Y][MAIN_X]; //Áï maincpy´Â °ÔÀÓÆÇÀÌ ¸ð´ÏÅÍ¿¡ Ç¥½ÃµÇ±â ÀüÀÇ Á¤º¸¸¦ °¡Áö°í ÀÖÀ½ 
-                              //mainÀÇ ÀüÃ¼¸¦ °è¼Ó ¸ð´ÏÅÍ¿¡ Ç¥½ÃÇÏÁö ¾Ê°í(ÀÌ·¸°Ô ÇÏ¸é ¸ð´ÏÅÍ°¡ ±ôºý°Å¸²) 
-                              //main_cpy¿Í ¹è¿­À» ºñ±³ÇØ¼­ °ªÀÌ ´Þ¶óÁø °÷¸¸ ¸ð´ÏÅÍ¿¡ °íÄ§ 
+int main_org[MAIN_Y][MAIN_X]; //ê²Œìž„íŒì˜ ì •ë³´ë¥¼ ì €ìž¥í•˜ëŠ” ë°°ì—´ ëª¨ë‹ˆí„°ì— í‘œì‹œí›„ì— main_cpyë¡œ ë³µì‚¬ë¨ 
+int main_cpy[MAIN_Y][MAIN_X]; //ì¦‰ maincpyëŠ” ê²Œìž„íŒì´ ëª¨ë‹ˆí„°ì— í‘œì‹œë˜ê¸° ì „ì˜ ì •ë³´ë¥¼ ê°€ì§€ê³  ìžˆìŒ 
+                              //mainì˜ ì „ì²´ë¥¼ ê³„ì† ëª¨ë‹ˆí„°ì— í‘œì‹œí•˜ì§€ ì•Šê³ (ì´ë ‡ê²Œ í•˜ë©´ ëª¨ë‹ˆí„°ê°€ ê¹œë¹¡ê±°ë¦¼) 
+                              //main_cpyì™€ ë°°ì—´ì„ ë¹„êµí•´ì„œ ê°’ì´ ë‹¬ë¼ì§„ ê³³ë§Œ ëª¨ë‹ˆí„°ì— ê³ ì¹¨ 
 int main_sim[MAIN_Y][MAIN_X];
 
-int bx, by; //ÀÌµ¿ÁßÀÎ ºí·ÏÀÇ °ÔÀÓÆÇ»óÀÇ x,yÁÂÇ¥¸¦ ÀúÀå 
-int key; //Å°º¸µå·Î ÀÔ·Â¹ÞÀº Å°°ªÀ» ÀúÀå 
-int speed; //°ÔÀÓÁøÇà¼Óµµ 
-int level; //ÇöÀç level 
-int level_goal; //´ÙÀ½·¹º§·Î ³Ñ¾î°¡±â À§ÇÑ ¸ñÇ¥Á¡¼ö 
-int cntl; //ÇöÀç ·¹º§¿¡¼­ Á¦°ÅÇÑ ÁÙ ¼ö¸¦ ÀúÀå 
-int score; //ÇöÀç Á¡¼ö 
-int last_score = 0; //¸¶Áö¸·°ÔÀÓÁ¡¼ö 
-int best_score = 0; //ÃÖ°í°ÔÀÓÁ¡¼ö 
-int new_block_on = 0; //»õ·Î¿î ºí·°ÀÌ ÇÊ¿äÇÔÀ» ¾Ë¸®´Â flag 
-int crush_on = 0; //ÇöÀç ÀÌµ¿ÁßÀÎ ºí·ÏÀÌ Ãæµ¹»óÅÂÀÎÁö ¾Ë·ÁÁÖ´Â flag 
-int level_up_on = 0; //´ÙÀ½·¹º§·Î ÁøÇà(ÇöÀç ·¹º§¸ñÇ¥°¡ ¿Ï·áµÇ¾úÀ½À») ¾Ë¸®´Â flag 
-int space_key_on = 0; //hard drop»óÅÂÀÓÀ» ¾Ë·ÁÁÖ´Â flag 
+int bx, by; //ì´ë™ì¤‘ì¸ ë¸”ë¡ì˜ ê²Œìž„íŒìƒì˜ x,yì¢Œí‘œë¥¼ ì €ìž¥ 
+int key; //í‚¤ë³´ë“œë¡œ ìž…ë ¥ë°›ì€ í‚¤ê°’ì„ ì €ìž¥ 
+int speed; //ê²Œìž„ì§„í–‰ì†ë„ 
+int level; //í˜„ìž¬ level 
+int level_goal; //ë‹¤ìŒë ˆë²¨ë¡œ ë„˜ì–´ê°€ê¸° ìœ„í•œ ëª©í‘œì ìˆ˜ 
+int cntl; //í˜„ìž¬ ë ˆë²¨ì—ì„œ ì œê±°í•œ ì¤„ ìˆ˜ë¥¼ ì €ìž¥ 
+int score; //í˜„ìž¬ ì ìˆ˜ 
+int last_score = 0; //ë§ˆì§€ë§‰ê²Œìž„ì ìˆ˜ 
+int best_score = 0; //ìµœê³ ê²Œìž„ì ìˆ˜ 
+int new_block_on = 0; //ìƒˆë¡œìš´ ë¸”ëŸ­ì´ í•„ìš”í•¨ì„ ì•Œë¦¬ëŠ” flag 
+int crush_on = 0; //í˜„ìž¬ ì´ë™ì¤‘ì¸ ë¸”ë¡ì´ ì¶©ëŒìƒíƒœì¸ì§€ ì•Œë ¤ì£¼ëŠ” flag 
+int level_up_on = 0; //ë‹¤ìŒë ˆë²¨ë¡œ ì§„í–‰(í˜„ìž¬ ë ˆë²¨ëª©í‘œê°€ ì™„ë£Œë˜ì—ˆìŒì„) ì•Œë¦¬ëŠ” flag 
+int space_key_on = 0; //hard dropìƒíƒœìž„ì„ ì•Œë ¤ì£¼ëŠ” flag 
 
 int auto_mode_flag = 0;
 
 double weight[8] = { 0.332911, -2.924574, -0.360134, 0.633427, 3.602161, 4.187613, -5.065584, -1.224250 };
 
 
-void gotoxy(int x, int y) { //gotoxyÇÔ¼ö 
+void gotoxy(int x, int y) { //gotoxyí•¨ìˆ˜ 
     COORD pos = { 2 * x,y };
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
 }
 
-typedef enum { NOCURSOR, SOLIDCURSOR, NORMALCURSOR } CURSOR_TYPE; //Ä¿¼­¼û±â´Â ÇÔ¼ö¿¡ »ç¿ëµÇ´Â ¿­°ÅÇü 
-void setcursortype(CURSOR_TYPE c) { //Ä¿¼­¼û±â´Â ÇÔ¼ö 
+typedef enum { NOCURSOR, SOLIDCURSOR, NORMALCURSOR } CURSOR_TYPE; //ì»¤ì„œìˆ¨ê¸°ëŠ” í•¨ìˆ˜ì— ì‚¬ìš©ë˜ëŠ” ì—´ê±°í˜• 
+void setcursortype(CURSOR_TYPE c) { //ì»¤ì„œìˆ¨ê¸°ëŠ” í•¨ìˆ˜ 
     CONSOLE_CURSOR_INFO CurInfo;
 
     switch (c) {
@@ -134,7 +134,7 @@ enum {
     WHITE,
 };
 
-// ÄÜ¼Ö ÅØ½ºÆ® »ö»ó º¯°æÇØÁÖ´Â ÇÔ¼ö
+// ì½˜ì†” í…ìŠ¤íŠ¸ ìƒ‰ìƒ ë³€ê²½í•´ì£¼ëŠ” í•¨ìˆ˜
 void setColor(int color, int bgcolor)
 {
     color &= 0xf;
